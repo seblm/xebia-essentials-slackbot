@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 class Card {
 
-    private final String name;
-    private final Category category;
+    final String name;
+    final Category category;
     final String title;
     final String back;
     final String authors;

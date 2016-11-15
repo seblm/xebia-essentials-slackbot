@@ -3,7 +3,7 @@ package xebiaessentialsslackbot;
 class Category {
 
     private final String name;
-    private final String colour;
+    final String colour;
 
     Category(String name, String colour) {
         this.name = name;
