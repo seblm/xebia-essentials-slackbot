@@ -1,0 +1,476 @@
+{
+  "cards": [
+    {
+      "name": "acceptance-criteria",
+      "category": "testing",
+      "title": "Start with acceptance criteria\n\n",
+      "back": "<p>Acceptance criteria should be part of your definition of ready. Make sure\neveryone has a common understanding of what they are before building anything.\nSafeguard your acceptance criteria in automated tests.</p>\n"
+    },
+    {
+      "name": "alone-time",
+      "category": "collaboration",
+      "title": "Alone time\n\n",
+      "back": "<p>For some situations pair programming is not effective. Be prepared to allow yourself and your team members to have some time alone.</p>\n"
+    },
+    {
+      "name": "apis-are-forever",
+      "category": "realisation",
+      "title": "APIs, like diamonds, are forever\n\n",
+      "back": "<p>So craft them carefully:</p>\n\n<blockquote><ul>\n<li>APIs should be self-documenting</li>\n<li>Obey the principle of least astonishment</li>\n<li>Use consistent parameter ordering across methods</li>\n<li>APIs should be easy to use, and hard to misuse\n<div class=\"attribution\">Joshua Bloch</div></li>\n</ul>\n</blockquote>\n"
+    },
+    {
+      "name": "assertions",
+      "category": "realisation",
+      "title": "Assert against improper behaviour\n\n",
+      "back": "<blockquote><p>If it can't happen, use assertions to assure it won't.\n<div class=\"attribution\">Andrew Hunt, David Thomas</div></p></blockquote>\n"
+    },
+    {
+      "name": "automate-everything",
+      "category": "realisation",
+      "title": "Automate the entire release and deployment process\n\n",
+      "back": "<p>The release and deployment process should be fast, reliable and repeatable several times a day.</p>\n"
+    },
+    {
+      "name": "boy-scout-rule",
+      "category": "realisation",
+      "title": "Leave the campground cleaner than you found it\n\n",
+      "back": "<p>Also known as the Boy Scout Rule, after the Boy Scouts of America. Applied to\nprogramming: Always check in code in a cleaner state than when you checked it\nout.</p>\n"
+    },
+    {
+      "name": "brutal-transparency",
+      "category": "collaboration",
+      "title": "Brutal Transparency\n\n",
+      "back": "<p>The only way to build trust is to be honest and transparent under all circumstances.</p>\n"
+    },
+    {
+      "name": "build-it-run-it",
+      "category": "collaboration",
+      "title": "You build it, you run it!\n\n",
+      "back": "<p>The development team is responsible for the software in production.</p>\n\n<blockquote><p>The best way to completely automate operations is to have to developers be\nresponsible for running the software they develop. [...] There is no separate\noperations department at Amazon: you build it; you run it.\n<div class=\"attribution\">Werner Vogels</div></p></blockquote>\n"
+    },
+    {
+      "name": "clean-build",
+      "category": "craftsmanship",
+      "title": "Keep the build clean\n\n",
+      "back": "<p>The build logs should tell a clear story about failures, errors, but also warnings.</p>\n"
+    },
+    {
+      "name": "clean-logs",
+      "category": "testing",
+      "title": "Keep your logs clean\n\n",
+      "back": "<p>Log everything you need, but nothing more:</p>\n\n<ul>\n<li>Log at the right level</li>\n<li>Log every message once</li>\n<li>Categorize if needed</li>\n<li>Throw meaningful exceptions</li>\n<li>Don't cry wolf</li>\n</ul>\n\n"
+    },
+    {
+      "name": "code-review",
+      "category": "collaboration",
+      "title": "Review code\n\n",
+      "back": "<p>The primary goal of code review is to increase its quality. Can be used as an\nadditional safety net alongside pair programming.</p>\n\n<p>It is also a good way to share knowledge and pick up some new tricks.</p>\n"
+    },
+    {
+      "name": "comment-with-care",
+      "category": "craftsmanship",
+      "title": "Comment with care\n\n",
+      "back": "<ul>\n<li>Don't document bad code &ndash; rewrite it</li>\n<li>Don't repeat the code &ndash; clarify its intent</li>\n<li>Document surprises and workarounds</li>\n<li>Make every comment count</li>\n</ul>\n\n"
+    },
+    {
+      "name": "composition-over-inheritance",
+      "category": "realisation",
+      "title": "Favor composition over inheritance\n\n",
+      "back": "<p>Also known as the &lsquo;composite reuse principle&rsquo;. Favor composition\nover inheritance to achieve polymorphism.</p>\n"
+    },
+    {
+      "name": "context-over-habit",
+      "category": "craftsmanship",
+      "title": "Improve practices, don't just follow the recipe\n\n",
+      "back": "<p>With all &lsquo;best practices&rsquo;, principles and experience, you should\nalways keep an eye on the context: does what used to work there and then also\nwork here and now? Keep thinking, keep looking.</p>\n"
+    },
+    {
+      "name": "curiosity",
+      "category": "craftsmanship",
+      "title": "Be curious\n\n",
+      "back": "<blockquote><p>Curiouser and curiouser!\n<div class=\"attribution\">Alice in Wonderland</div></p></blockquote>\n\n<p>Curiosity is one of the main sources of creativity.</p>\n"
+    },
+    {
+      "name": "dare-to-say-no",
+      "category": "craftsmanship",
+      "title": "Dare to say no\n\n",
+      "back": "<p>In Software Engineering, some things are just not possible. Stand up for your\nvalues as a professional and refuse to do them! A good doctor will not promise\nto heal everything either.</p>\n"
+    },
+    {
+      "name": "definition-of-ready",
+      "category": "collaboration",
+      "title": "Work on stories when they're ready\n\n",
+      "back": "<p>Have a Definition of READY to judge whether a user story is fit to go into a sprint.</p>\n\n<ul>\n<li>Do the team members understand the story?</li>\n<li>Is the story sized correctly?</li>\n<li>Have the acceptance criteria been defined?</li>\n<li>Are the external dependencies in place?</li>\n<li>How will the demo look?</li>\n</ul>\n\n"
+    },
+    {
+      "name": "diagnose-before-cure",
+      "category": "craftsmanship",
+      "title": "Diagnose before cure\n\n",
+      "back": "<p>Measure first, make an isolated change, repeat until satisfied.</p>\n\n<p>Before you tune performance, first measure it. Then fix the worst bottleneck\nand measure again. Commonly you will find that bottlenecks shift, and you are\nmost effective when continuously measuring your progress.</p>\n"
+    },
+    {
+      "name": "done-is-live",
+      "category": "collaboration",
+      "title": "Done = Live!\n\n",
+      "back": "<p>The work of the development team is only done, when the feature is live in production.</p>\n"
+    },
+    {
+      "name": "done",
+      "category": "collaboration",
+      "title": "It ain't over till it's done\n\n",
+      "back": "<p>Create a clear definition of done to have a firm agreement on whether a task is\nfinished or not.</p>\n"
+    },
+    {
+      "name": "dry-principle",
+      "category": "craftsmanship",
+      "title": "Don't Repeat Yourself\n\n",
+      "back": "<blockquote><p>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.\n<div class=\"attribution\">Andy Hunt and Dave Thomas</div></p></blockquote>\n"
+    },
+    {
+      "name": "eliminate-waste",
+      "category": "collaboration",
+      "title": "Eliminate waste\n\n",
+      "back": "<p>Sources of waste in software development include:</p>\n\n<ul>\n<li>Partially done work</li>\n<li>Extra features</li>\n<li>Relearning</li>\n<li>Task switching</li>\n<li>Hand-offs</li>\n<li>Delays</li>\n<li>Defects</li>\n</ul>\n\n"
+    },
+    {
+      "name": "exploratory-testing",
+      "category": "testing",
+      "title": "Make room for exploratory testing\n\n",
+      "back": "<p>Following a test script means you're consistent, but predictable.  Exploratory\ntesting reveals the things you hadn't thought to script. Be curious, go outside\nthe beaten path.</p>\n"
+    },
+    {
+      "name": "fail-fast",
+      "category": "testing",
+      "title": "Fail fast\n\n",
+      "back": "<p>Address risks early on in the project. Don't postpone difficult tasks, because\nthey provide you with an opportunity to learn. Tackle them head-on, and get it\nover with.</p>\n"
+    },
+    {
+      "name": "fallacies-distributed-computing",
+      "category": "realisation",
+      "title": "Remember the fallacies of distributed computing\n\n",
+      "back": "<blockquote><ul>\n<li>The network is reliable</li>\n<li>Latency is zero</li>\n<li>Bandwidth is infinite</li>\n<li>The network is secure</li>\n<li>Topology doesn't change</li>\n<li>There is one administrator</li>\n<li>Transport cost is zero</li>\n<li>The network is homogeneous\n<div class=\"attribution\">Peter Deutsch</div></li>\n</ul>\n</blockquote>\n"
+    },
+    {
+      "name": "focus-on-flow",
+      "category": "collaboration",
+      "title": "Focus on flow\n\n",
+      "back": "<p>Focus on banishing costs increases costs.</p>\n\n<p>Focus on flow decreases costs.</p>\n"
+    },
+    {
+      "name": "focused-interfaces",
+      "category": "realisation",
+      "title": "Write small and focused interfaces\n\n",
+      "back": "<p>Also known as the &lsquo;interface segregation principle&rsquo;. Many specific\ninterfaces are better than one combined general interface.</p>\n"
+    },
+    {
+      "name": "genchi-genbutsu",
+      "category": "craftsmanship",
+      "title": "Find the root cause\n\n",
+      "back": "<p>Genchi genbutsu is a Japanese expression for the practice of finding your\nanswers right down at the source.</p>\n\n<p>Don't rely on second-hand reports or tables and charts of data to achieve a\ntrue understanding. Instead go to the place (gemba) where you can watch,\nobserve, and 'ask why five times'.</p>\n"
+    },
+    {
+      "name": "hands-off-machine",
+      "category": "realisation",
+      "title": "Keep your hands off the machine\n\n",
+      "back": "<p>Stop manual changes and automate the installation and configuration of the\nserver: from operating system to middleware and applications.</p>\n"
+    },
+    {
+      "name": "have-fun",
+      "category": "collaboration",
+      "title": "Have fun\n\n",
+      "back": "<p>If it ain't fun, it probably ain't right.</p>\n"
+    },
+    {
+      "name": "hurt-often",
+      "category": "collaboration",
+      "title": "If it hurts, do it more often\n\n",
+      "back": "<p>If any particular task, such as deployment to production, takes inordinate\neffort, force yourself to streamline the process.</p>\n"
+    },
+    {
+      "name": "improve-continuously",
+      "category": "craftsmanship",
+      "title": "Favor continuous improvement over delayed perfection\n\n",
+      "back": "<p>If you don't get better, you get worse.</p>\n\n<blockquote><p>Continuous improvement is not about the things you do well - that's work.\nContinuous improvement is about removing the things that get in the way of your\nwork. The headaches, the things that slow you down, that&rsquo;s what\ncontinuous improvement is all about.\n<div class=\"attribution\">Bruce Hamilton</div></p></blockquote>\n"
+    },
+    {
+      "name": "independent-tests",
+      "category": "testing",
+      "title": "Tests should be fast, reliable and independent\n\n",
+      "back": "<p>Independent unit tests can be run regardless of ordering and are easy to run in parallel. Speed and reliability optimize feedback.</p>\n\n<ul>\n<li>Don't share objects between tests.</li>\n<li>Minimize external dependencies, use mocks.</li>\n<li>Give each test the smallest possible scope.</li>\n<li>Optimize slow tests to make them not slow.</li>\n<li>Optimize flaky tests to make them reliable.</li>\n</ul>\n\n"
+    },
+    {
+      "name": "integrate-early",
+      "category": "realisation",
+      "title": "Integrate early\n\n",
+      "back": "<p>The point where two independently developed modules or systems meet tends to be\nthe locus of problems. Tackle these early on.</p>\n"
+    },
+    {
+      "name": "kiss",
+      "category": "realisation",
+      "title": "Your solution should not be more complicated than the problem\n\n",
+      "back": "<p>Also known as:</p>\n\n<ul>\n<li>The simplest thing that could possibly work</li>\n<li>Keep It Simple, Stupid (KISS)</li>\n<li>Less is more</li>\n<li>You Ain't Gonna Need It (YAGNI)</li>\n</ul>\n\n"
+    },
+    {
+      "name": "learn-a-new-language",
+      "category": "craftsmanship",
+      "title": "Learn a new language every year\n\n",
+      "back": "<p>Learning a new language teaches you new concepts that will benefit you when\nprogramming in your main language.</p>\n"
+    },
+    {
+      "name": "make-it-visible",
+      "category": "collaboration",
+      "title": "Make it visible\n\n",
+      "back": "<p>The most effective way to get a message across is by visualizing it. Use simple\ncharts and diagrams in favor of spreadsheets, and pictures instead of prose.</p>\n"
+    },
+    {
+      "name": "make-it-work-right-fast",
+      "category": "craftsmanship",
+      "title": "Make it work Make it right Make it fast\n\n",
+      "back": "<p>To prevent analysis paralysis, follow these simple steps in case a problem\nseems too big to tackle. First simply make it work. Second, make it right, by\nmaking your code compliant with craftsmanship principles. Finally, make it fast\nif really needed.</p>\n"
+    },
+    {
+      "name": "master-your-tools",
+      "category": "craftsmanship",
+      "title": "Master your tools\n\n",
+      "back": "<p>Expect unprecedented productivity gain when investing time in mastering your tools. Tools will help you to:</p>\n\n<ul>\n<li>Accelerate</li>\n<li>Focus</li>\n<li>Avoid repetitive tasks</li>\n<li>Eliminate duplication</li>\n</ul>\n\n\n<p>Tools include your IDE, commandline tools, desktop tools, editors, etc.</p>\n"
+    },
+    {
+      "name": "maximize-cohesion-minimize-coupling",
+      "category": "realisation",
+      "title": "Maximize cohesion Minimize coupling\n\n",
+      "back": "<p>Maximizing cohesion and minimizing coupling reduces complexity and increases testability.</p>\n"
+    },
+    {
+      "name": "no-anemic-domain-model",
+      "category": "realisation",
+      "title": "Beware of anemic domain models\n\n",
+      "back": "<p>Anemic domain models are data structures without any behaviour. They are a sign\nof poor object-oriented modelling.</p>\n\n<p>Domain-Driven Design (Eric Evans) is an alternative that takes better advantage\nof the object-oriented model's strengths and improves code maintainability.</p>\n"
+    },
+    {
+      "name": "no-blame-no-mercy",
+      "category": "collaboration",
+      "title": "No blame, but no mercy\n\n",
+      "back": "<p>Make mistakes, feel obliged to learn from them.  Look back and learn from what\nyou're doing; actively improve. Criticize bad code, don't criticize people. Fix\nit and share what you've learned.</p>\n"
+    },
+    {
+      "name": "no-broken-builds",
+      "category": "collaboration",
+      "title": "Sleep easy on a green build\n\n",
+      "back": "<p>It's the team's code; it's also the team's responsibility to have a running\nbuild. If the person who broke the build isn't around, that's no excuse.</p>\n"
+    },
+    {
+      "name": "no-broken-windows",
+      "category": "collaboration",
+      "title": "No broken windows\n\n",
+      "back": "<p>If something is broken, then fix it now, otherwise it will come back to haunt\nyou in the future.</p>\n"
+    },
+    {
+      "name": "no-multitasking",
+      "category": "craftsmanship",
+      "title": "No multitasking\n\n",
+      "back": "<p>Doing multiple things at once will lower your productivity instead of raising it.</p>\n\n<p>Try, as much as possible, to focus on one thing at a time.</p>\n\n<p>To do great work, you need great focus.</p>\n"
+    },
+    {
+      "name": "no-museum",
+      "category": "craftsmanship",
+      "title": "Prevent your code base from turning into a museum\n\n",
+      "back": "<p>There is no point in keeping dead code lying around in your code base. Get rid\nof it. Your version history will always allow you to get it back if you need\nto. The same goes for commented-out code: get rid of it.</p>\n\n<p>Keeping your codebase free of reminiscences of the past will make it easier to\nnavigate and understand.</p>\n"
+    },
+    {
+      "name": "no-test-no-bugfix",
+      "category": "craftsmanship",
+      "title": "No change without a failing test\n\n",
+      "back": "<ul>\n<li>Don't fix a bug before you have a broken test</li>\n<li>A feature is only considered done once you have tests for it</li>\n<li>Don't refactor before you have sufficient test coverage</li>\n</ul>\n\n"
+    },
+    {
+      "name": "non-functionals",
+      "category": "realisation",
+      "title": "Deal with non-functionals\n\n",
+      "back": "<p>Work all your non-functional requirements into goals on a clearly defined scale\nand put them on the backlog, either as part of the 'definition of done' or as\nseparate user stories.</p>\n"
+    },
+    {
+      "name": "one-change-at-a-time",
+      "category": "craftsmanship",
+      "title": "One change at a time\n\n",
+      "back": "<p>A single commit should be consistent and contain only changes related to a\nsingle user story/issue.  For instance, don't mix formatting changes with bug\nfixes.</p>\n"
+    },
+    {
+      "name": "one-feature-at-a-time",
+      "category": "collaboration",
+      "title": "One feature at a time\n\n",
+      "back": "<p>First complete what you started before starting something new. It decreases\ntime to market and allows you to apply experience gained during development of\nthe first feature in the development of the next one.</p>\n"
+    },
+    {
+      "name": "pair-programming",
+      "category": "collaboration",
+      "title": "Pair programming\n\n",
+      "back": "<p>Pairing improves focus and fosters collective ownership more effectively than\ngroup discussions, documentation and reviews.</p>\n"
+    },
+    {
+      "name": "poutsma-principle",
+      "category": "realisation",
+      "title": "If something is too complex to understand, it must be wrong\n\n",
+      "back": "<p>...and it's your job to prove it wrong. Also known as the &lsquo;Poutsma Principle&rsquo;.</p>\n"
+    },
+    {
+      "name": "readable-code",
+      "category": "craftsmanship",
+      "title": "Write code that humans can easily understand\n\n",
+      "back": "<blockquote><p>Any fool can write code that a computer can understand. Good programmers write\ncode that humans can understand.  A simple, readable implementation is head and\nshoulders above a clever-but-confusing, look-at-me implementation.  Things to\nkeep in mind are readability, maintainability and speed of development.\n<div class=\"attribution\">Martin Fowler</div></p></blockquote>\n"
+    },
+    {
+      "name": "rich-communication",
+      "category": "craftsmanship",
+      "title": "Prefer rich modes of communication\n\n",
+      "back": "<ul>\n<li>Personal conversation over telephone call</li>\n<li>Telephone call over chat</li>\n<li>Chat over email</li>\n<li>Email over voice mail</li>\n</ul>\n\n"
+    },
+    {
+      "name": "run-tests-automatically",
+      "category": "testing",
+      "title": "Run tests automatically\n\n",
+      "back": "<p>Starting tests by hand is needless friction. Don't just use a build server.\nUse an IDE plugin that tracks source/test dependency and runs the affected\ntests whenever you save a file.</p>\n"
+    },
+    {
+      "name": "secure-development",
+      "category": "realisation",
+      "title": "Develop for security\n\n",
+      "back": "<p>You can't successfully add security to an existing insecure system. Consider\nsecurity requirements during all steps of your development process.</p>\n"
+    },
+    {
+      "name": "separation-of-concerns",
+      "category": "realisation",
+      "title": "Separation of concerns\n\n",
+      "back": "<blockquote><p>Separate a program into non-overlapping concerns.\n<div class=\"attribution\">Edsger W. Dijkstra</div></p></blockquote>\n"
+    },
+    {
+      "name": "shared-design-understanding",
+      "category": "realisation",
+      "title": "Share the design\n\n",
+      "back": "<p>Everyone in the team should be aware of the core design ideas that have given\nshape and structure to the software so far, and understand the underlying\nintent.</p>\n"
+    },
+    {
+      "name": "small-increments",
+      "category": "craftsmanship",
+      "title": "Work in small increments\n\n",
+      "back": "<p>Every commit should be a change from one stable state of the system to another\nstable state of the system, and should not represent more than two hours of\nwork.</p>\n"
+    },
+    {
+      "name": "tdd-shapes-design",
+      "category": "testing",
+      "title": "Test Driven Development shapes design\n\n",
+      "back": "<p>Well-structured code follows naturally from the test-driven development (TDD) process.</p>\n\n<p>However, locally emergent architecture without an overall vision can become\nincoherent in the large.</p>\n"
+    },
+    {
+      "name": "team-member-equality",
+      "category": "collaboration",
+      "title": "Judge on content, not on authority\n\n",
+      "back": "<p>We distinguish on the validity of the ideas, not on roles, authority or\nlocation.</p>\n"
+    },
+    {
+      "name": "team-rhythm",
+      "category": "collaboration",
+      "title": "Get the team in a rhythm\n\n",
+      "back": "<p>A team that works according to a defined heartbeat is much more effective since\nit doesn't waste time organizing meetings or spend time thinking about and\nplanning what to do when.</p>\n"
+    },
+    {
+      "name": "test-code-one",
+      "category": "testing",
+      "title": "Think of code and test as one\n\n",
+      "back": "<blockquote><p>When writing the code, think of the test.\nWhen writing the test, think of the code.\nWhen you think of code and test as one, testing is easy and code is beautiful.\n<div class=\"attribution\">Testivus</div></p></blockquote>\n"
+    },
+    {
+      "name": "test-everything",
+      "category": "testing",
+      "title": "When you don't have time to test everything, you're building too much\n\n",
+      "back": "<p>When a story isn't tested, it simply is not ready for production.  This means\nthat focus should be on testing throughout the sprint, by the whole team.  No\nnew work should be picked up if there is still unfinished test work.</p>\n"
+    },
+    {
+      "name": "testing-is-shared-responsibility",
+      "category": "testing",
+      "title": "Testing is a shared responsibility\n\n",
+      "back": "<p>Testing is not just the domain of the tester, but a core value for the\ndevelopment team. Every developer is a tester first.</p>\n"
+    },
+    {
+      "name": "tests-are-specs",
+      "category": "testing",
+      "title": "Tests are Specifications\n\n",
+      "back": "<p>Don't test an implementation, test its conformance to a required behaviour.\nTests written in this way become executable specifications, stories and\nexamples. They document what the code is intended to do, not cast in cement how\nit does so.</p>\n"
+    },
+    {
+      "name": "the-zone",
+      "category": "collaboration",
+      "title": "Respect the zone\n\n",
+      "back": "<p>&lsquo;The zone&rsquo; is a mode of consciousness that is associated with higher capabilities. When in the zone a developer is more productive.</p>\n\n<p>When a developer is in the zone, avoid disruptions.</p>\n"
+    },
+    {
+      "name": "thirty-minute-methods",
+      "category": "realisation",
+      "title": "Split functionality into small units\n\n",
+      "back": "<p>A function should be replaceable by one of your colleagues in less than thirty minutes.</p>\n"
+    },
+    {
+      "name": "thread-safe",
+      "category": "realisation",
+      "title": "Aim for thread safety\n\n",
+      "back": "<p>In order of decreasing safety:</p>\n\n<ul>\n<li>Stateless services</li>\n<li>Immutable shared state</li>\n<li>Encapsulated locks</li>\n<li>Not thread safe</li>\n</ul>\n\n"
+    },
+    {
+      "name": "three-strikes",
+      "category": "craftsmanship",
+      "title": "Three strikes and you automate\n\n",
+      "back": "<ul>\n<li>The first time you do something, you just do it manually</li>\n<li>The second time you do something similar, you wince at the repetition, but you do it anyway</li>\n<li>The third time you do something similar, you automate</li>\n</ul>\n\n"
+    },
+    {
+      "name": "time-for-tech-debt",
+      "category": "craftsmanship",
+      "title": "Take time to tackle tech debt\n\n",
+      "back": "<p>Make your Product Owner understand why it is critical to fix technical debt. Explain that sustainable pace is the only way.</p>\n"
+    },
+    {
+      "name": "timebox",
+      "category": "collaboration",
+      "title": "Timebox the unknown\n\n",
+      "back": "<ul>\n<li>Timebox a story/task that can't be estimated during planning.</li>\n<li>Communicate the results to the product owner / scrum master in order to have accurate estimates.</li>\n<li>You must stay within the boundaries of a timebox.</li>\n</ul>\n\n"
+    },
+    {
+      "name": "two-minute-rule",
+      "category": "craftsmanship",
+      "title": "If you are stuck developing for more than two minutes, you MUST ask somebody else\n\n",
+      "back": "<p>It's not professional to waste time by trying to solve something on your own that is quicker solved with help.</p>\n\n<p>You know you're stuck when you can't think of new terms to type into Google.</p>\n"
+    },
+    {
+      "name": "what-you-measure",
+      "category": "collaboration",
+      "title": "You get what you measure\n\n",
+      "back": "<p>Metrics are useful, but beware of tunnel vision. If you focus exclusively on any specific quality attributes (like code coverage), other attributes may suffer.</p>\n\n<p>This effect is magnified when the carrot or the stick is involved, such as a target code coverage ordained by management.</p>\n"
+    }
+  ],
+  "categories": [
+    {
+      "name": "craftsmanship",
+      "colour": "#F80068"
+    },
+    {
+      "name": "collaboration",
+      "colour": "#FC7A25"
+    },
+    {
+      "name": "realisation",
+      "colour": "#107FD5"
+    },
+    {
+      "name": "testing",
+      "colour": "#6DC726"
+    },
+    {
+      "name": "other",
+      "colour": "#4C2F5C"
+    }
+  ],
+  "mailto": "essentials@xebia.com",
+  "url": "//essentials.xebia.com",
+  "name": "Xebia Essentials",
+  "description": "The Xebia Essentials is a deck of flash cards about software craftsmanship.",
+  "timestamp": "2015-08-29 21:24:58 +0200",
+  "enableCustomerSupport": true
+}
