@@ -15,7 +15,18 @@ import java.util.Optional;
 public class Bot {
 
     public static void main(String[] args) {
-        SlackSession session = SlackSessionFactory.createWebSocketSlackSession(args[0]);
+        String authToken = System.getenv("AUTH_TOKEN");
+
+        if (authToken == null && args.length > 0) {
+            authToken = args[0];
+        }
+
+        if (authToken == null) {
+            System.err.println("no AUTH_TOKEN");
+            System.exit(-1);
+        }
+
+        SlackSession session = SlackSessionFactory.createWebSocketSlackSession(authToken);
 
         Optional<CardsRepository> maybeCardsRepository = CardsRepository.load();
         if (!maybeCardsRepository.isPresent()) {
