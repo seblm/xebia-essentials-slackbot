@@ -3,6 +3,7 @@ package xebiaessentialsslackbot;
 import com.ullink.slack.simpleslackapi.SlackAttachment;
 import com.ullink.slack.simpleslackapi.SlackSession;
 import com.ullink.slack.simpleslackapi.impl.SlackSessionFactory;
+import monitoring.HttpMonitoringServer;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -34,6 +35,9 @@ public class Bot {
             System.exit(-1);
         }
 
+        HttpMonitoringServer httpMonitoringServer = new HttpMonitoringServer();
+        httpMonitoringServer.start();
+
         CardsRepository repository = maybeCardsRepository.get();
         List<Card> shuffledCards = new ArrayList<>(repository.cards);
         Collections.shuffle(shuffledCards);
@@ -44,6 +48,8 @@ public class Bot {
                 session.disconnect();
             } catch (IOException e) {
                 e.printStackTrace();
+            } finally {
+                httpMonitoringServer.stop();
             }
         }));
 
