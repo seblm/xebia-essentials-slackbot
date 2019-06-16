@@ -1,15 +1,15 @@
 package xebiaessentialsslackbot;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CardsRepositoryTest {
+class CardsRepositoryTest {
 
     @Test
-    public void should_load_categories() {
+    void should_load_categories() {
         Optional<CardsRepository> maybeRepository = CardsRepository.load();
 
         assertThat(maybeRepository).hasValueSatisfying(repository -> assertThat(repository.categories)
@@ -25,7 +25,7 @@ public class CardsRepositoryTest {
     }
 
     @Test
-    public void should_load_cards() {
+    void should_load_cards() {
         Optional<CardsRepository> maybeRepository = CardsRepository.load();
 
         assertThat(maybeRepository).hasValueSatisfying(repository -> assertThat(repository.cards)
