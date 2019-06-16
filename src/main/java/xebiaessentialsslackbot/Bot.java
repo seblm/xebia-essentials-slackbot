@@ -55,11 +55,12 @@ public class Bot {
                 }
                 if (event.getMessageContent().contains("card") && event.getMessageContent().contains("day")) {
                     Card cardOfTheDay = shuffledCards.get(Period.between(startedDate, LocalDate.now()).getDays() % shuffledCards.size());
-                    SlackAttachment slackAttachment = new SlackAttachment(
-                            cardOfTheDay.title,
-                            cardOfTheDay.title,
-                            cardOfTheDay.back,
-                            "card of the day: " + cardOfTheDay.name);
+                    SlackAttachment slackAttachment = SlackAttachment.builder()
+                            .title(cardOfTheDay.title)
+                            .fallback(cardOfTheDay.title)
+                            .text(cardOfTheDay.back)
+                            .pretext("card of the day: " + cardOfTheDay.name)
+                            .build();
                     slackAttachment.setColor(cardOfTheDay.category.colour);
                     slackAttachment.setTitleLink("http://essentials.xebia.com/" + cardOfTheDay.name);
                     if (cardOfTheDay.authors != null) {
