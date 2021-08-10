@@ -1,13 +1,18 @@
 package xebiaessentialsslackbot;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import com.google.gson.Gson;
+import xebiaessentialsslackbot.api.Api;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import static java.util.Objects.requireNonNull;
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toMap;
 
 class CardsRepository {
 
@@ -21,29 +26,16 @@ class CardsRepository {
     }
 
     static Optional<CardsRepository> load() {
-        JSONParser jsonParser = new JSONParser();
-        try {
-            JSONObject parse = (JSONObject) jsonParser.parse(new InputStreamReader(CardsRepository.class.getResourceAsStream("api.json")));
-            Map<String, Category> categories = new HashMap<>();
-            for (Object c : ((JSONArray) parse.get("categories"))) {
-                JSONObject category = (JSONObject) c;
-                String name = (String) category.get("name");
-                categories.put(name, new Category(name, (String) category.get("colour")));
-            }
-            List<Card> cards = new ArrayList<>();
-            for (Object c : ((JSONArray) parse.get("cards"))) {
-                JSONObject card = (JSONObject) c;
-                cards.add(new Card(
-                        (String) card.get("name"),
-                        categories.get(card.get("category")),
-                        (String) card.get("title"),
-                        (String) card.get("back")
-                ));
-            }
-            return Optional.of(new CardsRepository(categories.values(), cards));
-        } catch (IOException | ParseException e) {
-            e.printStackTrace();
+        Gson jsonParser = new Gson();
+        try (InputStreamReader reader = new InputStreamReader(requireNonNull(CardsRepository.class.getResourceAsStream("api.json")))) {
+            Api api = jsonParser.fromJson(reader, Api.class);
+            Map<String, Category> categories = api.categories.stream().collect(toMap(c -> c.name, c -> new Category(c.name, c.colour)));
+            return Optional.of(new CardsRepository(
+                    categories.values(),
+                    api.cards.stream().map(c -> new Card(c.name, categories.get(c.category), c.title, c.back)).collect(toList())
+            ));
+        } catch (IOException e) {
+            return Optional.empty();
         }
-        return Optional.empty();
     }
 }
