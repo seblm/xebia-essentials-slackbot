@@ -29,7 +29,7 @@ public class Bot {
         SlackSession session = SlackSessionFactory.createWebSocketSlackSession(authToken);
 
         Optional<CardsRepository> maybeCardsRepository = CardsRepository.load();
-        if (!maybeCardsRepository.isPresent()) {
+        if (maybeCardsRepository.isEmpty()) {
             System.err.println("unable to load cards");
             System.exit(-1);
         }
